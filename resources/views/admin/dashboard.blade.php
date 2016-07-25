@@ -69,7 +69,7 @@
     </li>
     <li><a href="/births/view"><i class="icon icon-eye-open"></i> View Registered Members</a></li>
     <li><a href="/births/deregister"><i class="icon icon-info-sign"></i>Delete Record</a></li>
-    <li class="submenu"> <a href="#"><i class="icon icon-file"></i> <span>Filter Population</span> <span class="label label-important"><i class=""></i></span></a>
+    <li class="submenu"> <a href="#"><i class="icon-graph"></i> <span>Filter Population</span> <span class="label label-important"><i class=""></i></span></a>
       <ul>
         <li><a href="/birth/register">By Constituency</a></li>
         <li><a href="#">By Location</a></li>
