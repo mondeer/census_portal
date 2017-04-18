@@ -63,13 +63,13 @@
   <ul>
     <li class="submenu"> <a href="#"><i class="icon icon-folder-open"></i> <span>New Registration</span> <span class="label label-important"><i class="icon icon-chevron-down"></i></span></a>
       <ul>
-        <li><a href="/birth/register">Child Registration</a></li>
-        <li><a href="#">Adult Registration</a></li>
+        <li><a href="/child/register">Child Registration</a></li>
+        <li><a href="/adult/register">Adult Registration</a></li>
       </ul>
     </li>
     <li><a href="/births/view"><i class="icon icon-eye-open"></i> View Registered Members</a></li>
     <li><a href="/births/deregister"><i class="icon icon-info-sign"></i>Delete Record</a></li>
-    <li class="submenu"> <a href="#"><i class="icon-graph"></i> <span>Filter Population</span> <span class="label label-important"><i class=""></i></span></a>
+    <li class="submenu"> <a href="#"><i class="icon icon-bar-chart"></i> <span>Filter Population</span> <span class="label "><i class="icon icon-chevron-down"></i></span></a>
       <ul>
         <li><a href="/birth/register">By Constituency</a></li>
         <li><a href="#">By Location</a></li>
@@ -168,6 +168,30 @@ function resetMenu() {
             return confirm("Do you want to delete this item");
           });
 
+        </script>
+
+        <script type="text/javascript">
+          function showDiv(select){
+             if(select.value==1){
+              document.getElementById('keiyo_north').style.display = "block";
+            } if(select.value==2){
+              document.getElementById('keiyo_south').style.display = "block";
+             }
+           if(select.value==3){
+             document.getElementById('mara_east').style.display = "block";
+            }
+            if(select.value==4){
+              document.getElementById('mara_west').style.display = "block";
+             }
+          }
+          if (window.addEventListener) {
+              select.addEventListener('change', onChange, false);
+          } else {
+              // of course, IE < 9 needs special treatment
+              select.attachEvent('onchange', function() {
+                  onChange.apply(select, arguments);
+              });
+          }
         </script>
 
 

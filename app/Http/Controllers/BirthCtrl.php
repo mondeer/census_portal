@@ -8,7 +8,7 @@ use census\Birth;
 class BirthCtrl extends Controller
 {
     public function create() {
-      return view('admin.births.register');
+      return view('admin.child.register');
     }
 
     public function postCreate(Request $request) {
@@ -32,13 +32,13 @@ class BirthCtrl extends Controller
     public function view() {
       $births = Birth::all();
 
-      return view('admin.births.view')->with('births', $births);
+      return view('admin.child.view')->with('births', $births);
     }
 
     public function deregister() {
       $births = Birth::all();
 
-      return view('admin.births.deregister')->with('births', $births);
+      return view('admin.child.deregister')->with('births', $births);
     }
 
     public function destroy($id)
@@ -51,7 +51,7 @@ class BirthCtrl extends Controller
     public function edit($id)
     {
       $birth = Birth::findOrFail($id);
-      return view('admin.births.edit')->with('birth', $birth);
+      return view('admin.child.edit')->with('birth', $birth);
     }
 
     public function update(Request $request, $id)

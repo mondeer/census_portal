@@ -19,9 +19,15 @@ Route::get('/system/admin', function() {
   return view('admin.dashboard');
 });
 
-Route::get('/birth/register', 'BirthCtrl@create');
+Route::get('/child/register', 'BirthCtrl@create');
 
-Route::post('/birth/register', 'BirthCtrl@postCreate');
+Route::post('/child/register', 'BirthCtrl@postCreate');
+
+Route::get('/adult/register', 'AdultCtrl@create');
+
+Route::post('/adult/register', 'AdultCtrl@postCreate');
+
+
 
 Route::get('/births/view', 'BirthCtrl@view');
 
@@ -32,3 +38,18 @@ Route::put('/births/edit/{id}', 'BirthCtrl@update');
 Route::get('/births/deregister', 'BirthCtrl@deregister');
 
 Route::delete('/births/destroy/{id}', 'BirthCtrl@destroy');
+
+
+Route::get('/adult/register', 'AdultCtrl@create');
+
+Route::post('/adult/register', 'AdultCtrl@postCreate');
+
+Route::get('/adult/view', 'AdultCtrl@view');
+
+Route::get('/adult/edit/{id}', 'AdultCtrl@edit');
+
+Route::put('/adult/edit/{id}', 'AdultCtrl@update');
+
+Route::get('/adult/deregister', 'AdultCtrl@deregister');
+
+Route::delete('/adult/destroy/{id}', 'AdultCtrl@destroy');
