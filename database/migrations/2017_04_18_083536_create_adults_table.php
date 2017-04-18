@@ -11,8 +11,8 @@ class CreateAdultsTable extends Migration
     {
         Schema::create('adults', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('birthcert');
-            $table->integer('national_id');
+            $table->string('birthcert')->unique();
+            $table->integer('national_id')->unique();
             $table->string('f_name');
             $table->string('m_name');
             $table->string('l_name');

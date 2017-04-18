@@ -31,8 +31,7 @@ class AdultCtrl extends Controller
         $adults->name_of_mother = $request->input('name_of_mother');
         $adults->save();
 
-        dd($user);
-        // return redirect('/adult/view');
+        return redirect('/adult/view');
     }
 
 

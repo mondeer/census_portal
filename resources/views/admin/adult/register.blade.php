@@ -40,7 +40,6 @@
         <div class="controls">
           <select name="district_of_birth">
             <option></option>
-            <option></option>
             <option>Keiyo District</option>
             <option>Marakwet District</option>
           </select>
@@ -48,7 +47,7 @@
 
         <label class="control-label">Constituency</label>
         <div class="controls">
-          <select id="test" name="constituency" onchange="showDiv(this)">
+          <select name="constituency">
             <option></option>
             <option>Keiyo North</option>
             <option>Keiyo South</option>
@@ -59,7 +58,7 @@
 <!-- Hidden divs for wards -->
 
         <label class="control-label">Select Ward</label>
-        <div class="controls" id="keiyo_south" style="display:none;">
+        <div class="controls">
           <select name="ward">
             <option></option>
             <option>Chemoibon</option>
@@ -77,12 +76,6 @@
             <option>Nyaru</option>
             <option>Soy</option>
             <option>Tumeiyo</option>
-          </select>
-        </div>
-
-        <div class="controls" id="keiyo_north" style="display:none;">
-          <select name="ward">
-            <option></option>
             <option>Central</option>
             <option>Irong</option>
             <option>Kapkonga</option>
@@ -95,22 +88,10 @@
             <option>Kiptuilong</option>
             <option>Kokwao</option>
             <option>Mutei</option>
-          </select>
-        </div>
-
-        <div class="controls" id="mara_east" style="display:none;">
-          <select name="ward">
-            <option></option>
             <option>Embobut/Embolot</option>
             <option>Endo</option>
             <option>Kapyego</option>
             <option>Sambirir</option>
-          </select>
-        </div>
-
-        <div class="controls" id="mara_west" style="display:none;">
-          <select name="ward">
-            <option></option>
             <option>Arror</option>
             <option>Chebororwa</option>
             <option>Cherang'any</option>
@@ -124,7 +105,6 @@
             <option>Sengwer</option>
           </select>
         </div>
-      </div>
 
       <div class="control-group">
         <label class="control-label">Location</label>
