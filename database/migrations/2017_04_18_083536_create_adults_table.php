@@ -6,24 +6,20 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateAdultsTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
+
     public function up()
     {
         Schema::create('adults', function (Blueprint $table) {
             $table->increments('id');
             $table->string('birthcert');
-            $table->string('national_id');
+            $table->integer('national_id');
             $table->string('f_name');
             $table->string('m_name');
             $table->string('l_name');
             $table->string('district_of_birth');
             $table->string('constituency');
-            $table->string('location');
             $table->string('ward');
+            $table->string('location');
             $table->date('dob');
             $table->string('gender');
             $table->string('name_of_father');
@@ -32,11 +28,6 @@ class CreateAdultsTable extends Migration
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
         Schema::dropIfExists('adults');

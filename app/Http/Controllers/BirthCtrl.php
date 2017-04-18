@@ -15,10 +15,13 @@ class BirthCtrl extends Controller
         $births = new Birth;
 
         $births->birthcert = $request->input('birthcert');
-        $births->names = $request->input('names');
+        $births->f_name = $request->input('f_name');
+        $births->m_name = $request->input('m_name');
+        $births->l_name = $request->input('l_name');
+        $births->district_of_birth = $request->input('district_of_birth');
         $births->constituency = $request->input('constituency');
-        $births->location = $request->input('location');
         $births->ward = $request->input('ward');
+        $births->location = $request->input('location');
         $births->dob = $request->input('dob');
         $births->gender = $request->input('gender');
         $births->name_of_father = $request->input('name_of_father');
@@ -58,7 +61,10 @@ class BirthCtrl extends Controller
     {
       $birth = Birth::findOrFail($id);
 
-      $birth->names= $request->input('names');
+      $birth->f_name = $request->input('f_name');
+      $birth->m_name = $request->input('m_name');
+      $birth->l_name = $request->input('l_name');
+      $birth->district_of_birth = $request->input('district_of_birth');
       $birth->constituency = $request->input('constituency');
       $birth->location = $request->input('location');
       $birth->ward = $request->input('ward');

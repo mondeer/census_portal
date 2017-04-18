@@ -28,7 +28,7 @@
 <!--top-Header-menu-->
 <div id="user-nav" class="navbar navbar-inverse">
   <ul class="nav">
-    <li  class="dropdown" id="profile-messages" ><a title="" href="#" data-toggle="dropdown" data-target="#profile-messages" class="dropdown-toggle"><i class="icon icon-user"></i>  <span class="text">Welcome Mengich</span><b class="caret"></b></a>
+    <li  class="dropdown" id="profile-messages" ><a title="" href="#" data-toggle="dropdown" data-target="#profile-messages" class="dropdown-toggle"><i class="icon icon-user"></i>  <span class="text">Welcome {{Sentinel::getUser()->first_name}}</span><b class="caret"></b></a>
       <ul class="dropdown-menu">
         <li><a href="#"><i class="icon-user"></i> My Profile</a></li>
         <li class="divider"></li>
@@ -172,26 +172,19 @@ function resetMenu() {
 
         <script type="text/javascript">
           function showDiv(select){
-             if(select.value==1){
+             if(select.value=="Keiyo North"){
               document.getElementById('keiyo_north').style.display = "block";
-            } if(select.value==2){
+            } if(select.value=="Keiyo South"){
               document.getElementById('keiyo_south').style.display = "block";
              }
-           if(select.value==3){
+           if(select.value=="Marakwet East"){
              document.getElementById('mara_east').style.display = "block";
             }
-            if(select.value==4){
+            if(select.value=="Marakwet West"){
               document.getElementById('mara_west').style.display = "block";
              }
           }
-          if (window.addEventListener) {
-              select.addEventListener('change', onChange, false);
-          } else {
-              // of course, IE < 9 needs special treatment
-              select.attachEvent('onchange', function() {
-                  onChange.apply(select, arguments);
-              });
-          }
+
         </script>
 
 

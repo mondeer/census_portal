@@ -23,12 +23,6 @@ Route::get('/child/register', 'BirthCtrl@create');
 
 Route::post('/child/register', 'BirthCtrl@postCreate');
 
-Route::get('/adult/register', 'AdultCtrl@create');
-
-Route::post('/adult/register', 'AdultCtrl@postCreate');
-
-
-
 Route::get('/births/view', 'BirthCtrl@view');
 
 Route::get('/births/edit/{id}', 'BirthCtrl@edit');

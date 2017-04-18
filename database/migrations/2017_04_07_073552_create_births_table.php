@@ -16,7 +16,10 @@ class CreateBirthsTable extends Migration
         Schema::create('births', function (Blueprint $table) {
             $table->increments('id');
             $table->string('birthcert');
-            $table->string('names');
+            $table->string('f_name');
+            $table->string('m_name');
+            $table->string('l_name');
+            $table->string('district_of_birth');
             $table->string('constituency');
             $table->string('location');
             $table->string('ward');

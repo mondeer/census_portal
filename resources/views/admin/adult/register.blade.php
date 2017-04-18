@@ -3,10 +3,10 @@
 @section('content')
 <div class="widget-box">
   <div class="widget-title"> <span class="icon"> <i class="icon-align-justify"></i> </span>
-    <h5>New-Born Registration</h5>
+    <h5>Adult Registration</h5>
   </div>
   <div class="widget-content nopadding">
-    <form action="/birth/register" method="POST" class="form-horizontal">
+    <form action="/adult/register" method="POST" class="form-horizontal">
 
       <input type="hidden" name="_token" value="{{csrf_token()}}">
 
@@ -38,7 +38,7 @@
 
         <label class="control-label">District Of Birth</label>
         <div class="controls">
-          <select id="test" name="district_of_birth">
+          <select name="district_of_birth">
             <option></option>
             <option></option>
             <option>Keiyo District</option>
@@ -50,10 +50,10 @@
         <div class="controls">
           <select id="test" name="constituency" onchange="showDiv(this)">
             <option></option>
-            <option value="1">Keiyo North</option>
-            <option value="2">Keiyo South</option>
-            <option value="3">Marakwet East</option>
-            <option value="4">Marakwet West</option>
+            <option>Keiyo North</option>
+            <option>Keiyo South</option>
+            <option>Marakwet East</option>
+            <option>Marakwet West</option>
           </select>
         </div>
 <!-- Hidden divs for wards -->

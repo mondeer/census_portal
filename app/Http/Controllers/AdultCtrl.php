@@ -3,6 +3,7 @@
 namespace census\Http\Controllers;
 
 use Illuminate\Http\Request;
+use census\Adult;
 
 class AdultCtrl extends Controller
 {
@@ -13,6 +14,8 @@ class AdultCtrl extends Controller
     public function postCreate(Request $request) {
         $adults = new Adult;
 
+        $user = $request->all();
+
         $adults->birthcert = $request->input('birthcert');
         $adults->national_id = $request->input('national_id');
         $adults->f_name = $request->input('f_name');
@@ -20,15 +23,16 @@ class AdultCtrl extends Controller
         $adults->l_name = $request->input('l_name');
         $adults->district_of_birth = $request->input('district_of_birth');
         $adults->constituency = $request->input('constituency');
-        $adults->location = $request->input('location');
         $adults->ward = $request->input('ward');
+        $adults->location = $request->input('location');
         $adults->dob = $request->input('dob');
         $adults->gender = $request->input('gender');
         $adults->name_of_father = $request->input('name_of_father');
         $adults->name_of_mother = $request->input('name_of_mother');
         $adults->save();
 
-        return redirect('/adult/view');
+        dd($user);
+        // return redirect('/adult/view');
     }
 
 
