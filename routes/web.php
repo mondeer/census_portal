@@ -47,3 +47,17 @@ Route::put('/adult/edit/{id}', 'AdultCtrl@update');
 Route::get('/adult/deregister', 'AdultCtrl@deregister');
 
 Route::delete('/adult/destroy/{id}', 'AdultCtrl@destroy');
+
+// report per constituency
+
+Route::get('/filter/constituency', 'FilterCtrl@filter');
+
+Route::post('/filter/constituency', 'FilterCtrl@constituency');
+
+Route::get('/filter/location', 'FilterCtrl@filterlocation');
+
+Route::post('/filter/location', 'FilterCtrl@location');
+
+Route::get('/filter/ward', 'FilterCtrl@filterward');
+
+Route::post('/filter/ward', 'FilterCtrl@ward');

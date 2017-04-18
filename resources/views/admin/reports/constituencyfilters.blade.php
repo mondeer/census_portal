@@ -1,9 +1,9 @@
-@extends('admin.dashboard')
+@extends('admin.reports.constituency')
 
-@section('content')
-<div class="widget-box">
+@section('results')
+
   <div class="widget-title"> <span class="icon"> <i class="icon-align-justify"></i> </span>
-    <h3>Registered Persons</h3>
+    <h3>{{$cons}} Registered Persons</h3>
   </div>
   <div class="widget-content nopadding">
     <table class="table table-striped table-positive table-hover">

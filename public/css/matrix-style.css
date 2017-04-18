@@ -67,7 +67,7 @@ hr{ border-top-color:#dadada;}
 }
 /* Search input */
 #search {
-	position: absolute;
+	
 	z-index: 25;
 	top: 6px;
 	right:10px;

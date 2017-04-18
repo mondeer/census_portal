@@ -1,12 +1,12 @@
-@extends('admin.dashboard')
+@extends('admin.reports.location')
 
-@section('content')
-<div class="widget-box">
+@section('results')
+
   <div class="widget-title"> <span class="icon"> <i class="icon-align-justify"></i> </span>
-    <h3>Registered Persons</h3>
+    <h3>{{$locale}} Registered Persons</h3>
   </div>
   <div class="widget-content nopadding">
-    <table class="table table-striped table-positive table-hover">
+    <table class="table table-bordered table-positive table-hover">
 
               <thead>
               <tr>

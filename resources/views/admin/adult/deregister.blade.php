@@ -3,15 +3,16 @@
 @section('content')
 <div class="widget-box">
   <div class="widget-title"> <span class="icon"> <i class="icon-align-justify"></i> </span>
-    <h3>Registered Persons</h3>
+    <h3>Deregister Persons</h3>
   </div>
-  <div class="widget-content nopadding">
-    <table class="table table-striped table-positive table-hover">
+  <div class="widget-content">
+    <table class="table table-bordered table-hover">
 
               <thead>
               <tr>
                   <th> Id.</th>
                   <th> Birth Certificate No</th>
+                  <th> National ID</th>
                   <th> Full Names</th>
                   <th> District of Birth</th>
                   <th> Constituency</th>
@@ -34,6 +35,9 @@
                             </td>
                             <td>
                               {{ $adult->birthcert }}
+                            </td>
+                            <td>
+                              {{ $adult->national_id }}
                             </td>
                             <td>
                               {{$adult->f_name}} {{$adult->m_name}} {{$adult->l_name}}
@@ -62,7 +66,11 @@
                             <td>
                               {{$adult->name_of_father}}
                             </td>
-                            <td><a href="/adult/edit/{{$adult->id}}">Edit</a></td>
+                            <td><form class="delete" action="/adult/destroy/{{ $adult->id }}" method="post">
+                            <input type="hidden" name="_method" value="delete">
+                            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                            <input type="submit" value="Delete">
+                          </form></td>
                           </tr>
 
                   @endforeach
