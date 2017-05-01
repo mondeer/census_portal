@@ -177,6 +177,11 @@ return [
         census\Providers\EventServiceProvider::class,
         census\Providers\RouteServiceProvider::class,
         Cartalyst\Sentinel\Laravel\SentinelServiceProvider::class,
+        ConsoleTVs\Charts\ChartsServiceProvider::class,
+
+
+
+
 
 
     ],
@@ -230,6 +235,7 @@ return [
         'Activation' => Cartalyst\Sentinel\Laravel\Facades\Activation::class,
         'Reminder'   => Cartalyst\Sentinel\Laravel\Facades\Reminder::class,
         'Sentinel'   => Cartalyst\Sentinel\Laravel\Facades\Sentinel::class,
+        'Charts' => ConsoleTVs\Charts\Facades\Charts::class,
 
     ],
 

@@ -6,7 +6,7 @@
     <h3>Registered Persons</h3>
   </div>
   <div class="widget-content nopadding">
-    <table class="table table-striped table-positive table-hover">
+    <table class="table table-striped table-bordered table-hover">
 
               <thead>
               <tr>
@@ -35,7 +35,7 @@
                               {{ $birth->birthcert }}
                             </td>
                             <td>
-                              {{$birth->names}}
+                              {{$birth->f_name}} {{$birth->m_name}} {{$birth->l_name}}
                             </td>
                             <td>
                               {{$birth->constituency}}

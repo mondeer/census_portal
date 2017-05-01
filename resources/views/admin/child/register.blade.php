@@ -63,7 +63,7 @@
             <option>Kibargoi</option>
             <option>Kitany</option>
             <option>Kocholwo</option>
-            <option>Maoi<</option>
+            <option>Maoi</option>
             <option>Marichor</option>
             <option>Metkei</option>
             <option>Mosop</option>
@@ -78,7 +78,7 @@
             <option>Sergoit</option>
             <option>Kamogich</option>
             <option>Kapchemutwa</option>
-            <option>Keu<</option>
+            <option>Keu</option>
             <option>Kiptuilong</option>
             <option>Kokwao</option>
             <option>Mutei</option>
@@ -94,7 +94,7 @@
             <option>Kapsowar</option>
             <option>Koibarak</option>
             <option>Kuserwo</option>
-            <option>Lelan<</option>
+            <option>Lelan</option>
             <option>Moiben</option>
             <option>Sengwer</option>
           </select>
