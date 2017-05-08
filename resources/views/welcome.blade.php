@@ -28,7 +28,9 @@
     <br><br><br><br><br>
     <div class="container imond">
 
-      <h1 class="text-center imondwhite">LOGIN</h1>
+          <h1 class="text-center imondwhite">LOGIN</h1>
+
+      <hr>
 
       <form class="form-horizontal" role="form" method="POST" action="/login">
           {{ csrf_field() }}
@@ -56,10 +58,14 @@
                   <button type="submit" class="btn btn-primary">
                       Login
                   </button>
+
               </div>
           </div>
       </form>
-
+      <hr>
+      <div class="col-md-4">
+        <h1 class="text-right"><a class="imondwhite text-right" href="/register">not yet register?</a></h1>
+      </div>
     </div>
 
 

@@ -1,18 +1,19 @@
-@extends('admin.dashboard')
+@extends('admin.reports.ward')
 
-@section('content')
-<div class="widget-box">
+@section('results')
+
   <div class="widget-title"> <span class="icon"> <i class="icon-align-justify"></i> </span>
-    <h3>Registered Persons</h3>
+    <h3>{{$locale}} Registered Persons</h3>
   </div>
   <div class="widget-content nopadding">
-    <table class="table table-striped table-bordered table-hover">
+    <table class="table table-bordered table-positive table-hover">
 
               <thead>
               <tr>
                   <th> Id.</th>
                   <th> Birth Certificate No</th>
                   <th> Full Names</th>
+                  <th> District of Birth</th>
                   <th> Constituency</th>
                   <th> Location</th>
                   <th> Ward</th>
@@ -25,40 +26,43 @@
               </thead>
               <tbody>
 
-                  @foreach($births as $birth)
+                  @foreach($adults as $adult)
 
                           <tr>
                             <td>
-                              {{$birth->id}}
+                              {{$adult->id}}
                             </td>
                             <td>
-                              {{ $birth->birthcert }}
+                              {{ $adult->birthcert }}
                             </td>
                             <td>
-                              {{$birth->f_name}} {{$birth->m_name}} {{$birth->l_name}}
+                              {{$adult->f_name}} {{$adult->m_name}} {{$adult->l_name}}
                             </td>
                             <td>
-                              {{$birth->constituency}}
+                              {{$adult->district_of_birth}}
                             </td>
                             <td>
-                              {{$birth->location}}
+                              {{$adult->constituency}}
                             </td>
                             <td>
-                              {{$birth->ward}}
+                              {{$adult->location}}
                             </td>
                             <td>
-                              {{$birth->dob}}
+                              {{$adult->ward}}
                             </td>
                             <td>
-                              {{$birth->gender}}
+                              {{$adult->dob}}
                             </td>
                             <td>
-                              {{$birth->name_of_father}}
+                              {{$adult->gender}}
                             </td>
                             <td>
-                              {{$birth->name_of_mother}}
+                              {{$adult->name_of_father}}
                             </td>
-                            <td><a href="/births/edit/{{$birth->id}}">Edit</a></td>
+                            <td>
+                              {{$adult->name_of_father}}
+                            </td>
+                            <td><a href="/adult/edit/{{$adult->id}}">Edit</a></td>
                           </tr>
 
                   @endforeach

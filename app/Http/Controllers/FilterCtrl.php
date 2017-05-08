@@ -41,4 +41,38 @@ class FilterCtrl extends Controller
         'locale'=>$locale
       ));
     }
+
+    public function filterward() {
+      return view('admin.reports.ward');
+    }
+
+    public function ward(Request $request) {
+      $ward = Adult::query();
+
+      $locale = $request->input('ward');
+
+      $adults = $ward->where('ward', $locale)->get();
+
+      return view('admin.reports.wardfilters')->with(array(
+        'adults'=>$adults,
+        'locale'=>$locale
+      ));
+    }
+
+    public function filtergender() {
+      return view('admin.reports.gender');
+    }
+
+    public function gender(Request $request) {
+      $gender = Adult::query();
+
+      $locale = $request->input('gender');
+
+      $adults = $gender->where('gender', $locale)->get();
+
+      return view('admin.reports.genderfilters')->with(array(
+        'adults'=>$adults,
+        'locale'=>$locale
+      ));
+    }
 }

@@ -94,7 +94,7 @@
             <option>Kapsowar</option>
             <option>Koibarak</option>
             <option>Kuserwo</option>
-            <option>Lelan</option>
+            <option>Lelan<</option>
             <option>Moiben</option>
             <option>Sengwer</option>
           </select>

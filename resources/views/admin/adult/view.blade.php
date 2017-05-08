@@ -12,6 +12,7 @@
               <tr>
                   <th> Id.</th>
                   <th> Birth Certificate No</th>
+                  <th> National ID</th>
                   <th> Full Names</th>
                   <th> District of Birth</th>
                   <th> Constituency</th>
@@ -21,6 +22,7 @@
                   <th> Gender</th>
                   <th> Fathers Name</th>
                   <th> Mothers Name</th>
+                  <th>Edit</th>
 
               </tr>
               </thead>
@@ -34,6 +36,9 @@
                             </td>
                             <td>
                               {{ $adult->birthcert }}
+                            </td>
+                            <td>
+                              {{ $adult->national_id }}
                             </td>
                             <td>
                               {{$adult->f_name}} {{$adult->m_name}} {{$adult->l_name}}
@@ -60,7 +65,7 @@
                               {{$adult->name_of_father}}
                             </td>
                             <td>
-                              {{$adult->name_of_father}}
+                              {{$adult->name_of_mother}}
                             </td>
                             <td><a href="/adult/edit/{{$adult->id}}">Edit</a></td>
                           </tr>

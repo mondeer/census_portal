@@ -84,6 +84,7 @@
         <li><a href="/filter/constituency">By Constituency</a></li>
         <li><a href="/filter/location">By Location</a></li>
         <li><a href="/filter/ward">By Ward</a></li>
+        <li><a href="/filter/gender">By Gender</a></li>
       </ul>
     </li>
 

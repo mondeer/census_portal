@@ -48,7 +48,7 @@ Route::get('/adult/deregister', 'AdultCtrl@deregister');
 
 Route::delete('/adult/destroy/{id}', 'AdultCtrl@destroy');
 
-// report per constituency
+// reporting
 
 Route::get('/filter/constituency', 'FilterCtrl@filter');
 
@@ -61,3 +61,7 @@ Route::post('/filter/location', 'FilterCtrl@location');
 Route::get('/filter/ward', 'FilterCtrl@filterward');
 
 Route::post('/filter/ward', 'FilterCtrl@ward');
+
+Route::get('/filter/gender', 'FilterCtrl@filtergender');
+
+Route::post('/filter/gender', 'FilterCtrl@gender');

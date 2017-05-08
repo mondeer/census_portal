@@ -65,6 +65,10 @@
 
       </div>
   </form>
+  <hr>
+  <div class="col-md-4">
+    <h3 class="text-right"><a class="imondwhite text-right" href="/">Alredy have an account? Login</a></h3>
+  </div>
 </div>
 
 @endsection
