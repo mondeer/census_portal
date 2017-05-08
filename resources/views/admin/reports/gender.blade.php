@@ -16,6 +16,12 @@
           <option>Others</option>
         </select>
       </div>
+      <div class="controls">
+        <select name="gategory">
+          <option>children</option>
+          <option>adults</option>
+        </select>
+      </div>
       <button type="submit" class="tip-bottom" title="Search"><i class="icon-search icon-white"></i></button>
     </form>
   </div>

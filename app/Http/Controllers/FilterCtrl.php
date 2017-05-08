@@ -64,14 +64,24 @@ class FilterCtrl extends Controller
     }
 
     public function gender(Request $request) {
-      $gender = Adult::query();
 
+      $mod = $request->input('gategory');
       $locale = $request->input('gender');
 
-      $adults = $gender->where('gender', $locale)->get();
+      if ($mod == 'children'){
+        $child = Birth::query();
+        $persons = $child->where('gender', $locale)->get();
+      }elseif($mod == 'adults'){
+        $adult = Adult::query();
+        $persons = $adult->where('gender', $locale)->get();
+      }
+
+
+
+
 
       return view('admin.reports.genderfilters')->with(array(
-        'adults'=>$adults,
+        'persons'=>$persons,
         'locale'=>$locale
       ));
     }

@@ -26,43 +26,43 @@
               </thead>
               <tbody>
 
-                  @foreach($adults as $adult)
+                  @foreach($persons as $person)
 
                           <tr>
                             <td>
-                              {{$adult->id}}
+                              {{$person->id}}
                             </td>
                             <td>
-                              {{ $adult->birthcert }}
+                              {{ $person->birthcert }}
                             </td>
                             <td>
-                              {{$adult->f_name}} {{$adult->m_name}} {{$adult->l_name}}
+                              {{$person->f_name}} {{$person->m_name}} {{$person->l_name}}
                             </td>
                             <td>
-                              {{$adult->district_of_birth}}
+                              {{$person->district_of_birth}}
                             </td>
                             <td>
-                              {{$adult->constituency}}
+                              {{$person->constituency}}
                             </td>
                             <td>
-                              {{$adult->location}}
+                              {{$person->location}}
                             </td>
                             <td>
-                              {{$adult->ward}}
+                              {{$person->ward}}
                             </td>
                             <td>
-                              {{$adult->dob}}
+                              {{$person->dob}}
                             </td>
                             <td>
-                              {{$adult->gender}}
+                              {{$person->gender}}
                             </td>
                             <td>
-                              {{$adult->name_of_father}}
+                              {{$person->name_of_father}}
                             </td>
                             <td>
-                              {{$adult->name_of_father}}
+                              {{$person->name_of_father}}
                             </td>
-                            <td><a href="/adult/edit/{{$adult->id}}">Edit</a></td>
+                            <td><a href="/adult/edit/{{$person->id}}">Edit</a></td>
                           </tr>
 
                   @endforeach
