@@ -19,6 +19,10 @@ Route::get('/system/admin', function() {
   return view('admin.dashboard');
 });
 
+Route::get('/clerk/dashboard', function() {
+  return view('clerk.dashboard');
+});
+
 Route::get('/child/register', 'BirthCtrl@create');
 
 Route::post('/child/register', 'BirthCtrl@postCreate');
@@ -65,3 +69,31 @@ Route::post('/filter/ward', 'FilterCtrl@ward');
 Route::get('/filter/gender', 'FilterCtrl@filtergender');
 
 Route::post('/filter/gender', 'FilterCtrl@gender');
+
+// Route::post('/filter/birthcert', 'FilterCtrl@birthcert');
+
+Route::post('/birthcert',array('as'=>'/birthcert','uses'=>'FilterCtrl@birthcert'));
+
+
+// Clerk routes
+
+Route::get('/clerk/child/register', 'ClerkCtrl@create');
+
+Route::post('/clerk/child/register', 'ClerkCtrl@postCreate');
+
+Route::get('/clerk/births/view', 'ClerkCtrl@view');
+
+Route::get('/clerk/births/edit/{id}', 'ClerkCtrl@edit');
+
+Route::put('/clerk/births/edit/{id}', 'ClerkCtrl@update');
+
+
+Route::get('/clerk/adult/register', 'ClerkCtrl@createadult');
+
+Route::post('/clerk/adult/register', 'ClerkCtrl@postCreateadult');
+
+Route::get('/clerk/adult/view', 'ClerkCtrl@viewadult');
+
+Route::get('/clerk/adult/edit/{id}', 'ClerkCtrl@editadult');
+
+Route::put('/clerk/adult/edit/{id}', 'ClerkCtrl@updateadult');

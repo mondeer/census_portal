@@ -5,6 +5,7 @@ namespace census\Http\Controllers;
 use Illuminate\Http\Request;
 use census\Adult;
 use census\Birth;
+use PDF;
 
 class FilterCtrl extends Controller
 {
@@ -76,12 +77,24 @@ class FilterCtrl extends Controller
         $persons = $adult->where('gender', $locale)->get();
       }
 
-
-
-
-
       return view('admin.reports.genderfilters')->with(array(
         'persons'=>$persons,
+        'locale'=>$locale
+      ));
+    }
+
+    public function birthcert(Request $request) {
+      $child = Birth::query();
+      $locale = $request->input('birthcert');
+      $children = $child->where('birthcert', $locale)->get();
+
+      view()->share('children',$children);
+
+      $pdf = PDF::loadView('clerk.child.birthcert', $children);
+      return $pdf->download('clerk.child.birthcert');
+
+      return view('clerk.child.birthcert')->with(array(
+        'children'=>$children,
         'locale'=>$locale
       ));
     }

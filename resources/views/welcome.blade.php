@@ -64,7 +64,7 @@
       </form>
       <hr>
       <div class="col-md-4">
-        <h1 class="text-right"><a class="imondwhite text-right" href="/register">not yet register?</a></h1>
+        <h1 class="text-right"><a class="btn btn-primary btn-large imondwhite text-right" href="/register">not yet registered?</a></h1>
       </div>
     </div>
 

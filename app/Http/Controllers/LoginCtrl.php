@@ -14,7 +14,7 @@ class LoginCtrl extends Controller
       if(Sentinel::getUser()->roles()->first()->slug == 'admin'){
         return redirect('/system/admin');
       } elseif (Sentinel::getUser()->roles()->first()->slug == 'clerk') {
-        return redirect('/birth/register');
+        return redirect('/clerk/dashboard');
       } else {
         return redirect('/');
       }
