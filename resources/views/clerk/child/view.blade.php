@@ -7,7 +7,7 @@
   </div>
 
   <div id="search">
-    <form class="" action="/birthcert" method="post">
+    <form class="" action="/filter/birthcert" method="post">
       {{csrf_field()}}
       <input type="text" name="birthcert" placeholder="Search here..."/>
       <button type="submit" class="tip-bottom" title="Search"><i class="icon-search icon-white"></i></button>

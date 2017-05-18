@@ -1,7 +1,3 @@
-@extends('clerk.dashboard')
-
-@section('content')
-<a href="/birthcert">Download PDF</a>
       @foreach($children as $person)
             <div class="row">
               <div class="span9 text-center col-md-offset-2">
@@ -10,7 +6,7 @@
               </div>
               <div class="span3">
                 <br><br>
-                <h2 class="text-right">{{$person->birthcert}}</h2>
+                <h2 class="text-right">Birth Cert No: {{$person->birthcert}}</h2>
               </div>
             </div>
 
@@ -67,6 +63,4 @@
             <div class="span6">
               <em>This certificate is system generated, can be used for official purposes.</em>
             </div>
-
-        @endforeach
-@endsection
+          @endforeach

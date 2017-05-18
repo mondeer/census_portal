@@ -70,9 +70,9 @@ Route::get('/filter/gender', 'FilterCtrl@filtergender');
 
 Route::post('/filter/gender', 'FilterCtrl@gender');
 
-// Route::post('/filter/birthcert', 'FilterCtrl@birthcert');
+Route::post('/filter/birthcert', 'FilterCtrl@cert');
 
-Route::post('/birthcert',array('as'=>'/birthcert','uses'=>'FilterCtrl@birthcert'));
+Route::get('/birthcert',array('as'=>'/birthcert','uses'=>'FilterCtrl@birthcert'));
 
 
 // Clerk routes

@@ -83,6 +83,17 @@ class FilterCtrl extends Controller
       ));
     }
 
+    public function cert(Request $request) {
+      $child = Birth::query();
+      $locale = $request->input('birthcert');
+      $children = $child->where('birthcert', $locale)->get();
+
+      return view('clerk.child.birthcert')->with(array(
+        'children'=>$children,
+        'locale'=>$locale
+      ));
+    }
+
     public function birthcert(Request $request) {
       $child = Birth::query();
       $locale = $request->input('birthcert');
@@ -90,8 +101,8 @@ class FilterCtrl extends Controller
 
       view()->share('children',$children);
 
-      $pdf = PDF::loadView('clerk.child.birthcert', $children);
-      return $pdf->download('clerk.child.birthcert');
+      $pdf = PDF::loadView('clerk.birthcert', $children);
+      return $pdf->download('clerk.birthcert');
 
       return view('clerk.child.birthcert')->with(array(
         'children'=>$children,
