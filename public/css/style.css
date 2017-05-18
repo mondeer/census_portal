@@ -8,7 +8,7 @@ body {
 }
 
 .imond {
-  background-color: rgba(47,50,83, 0.7);
+  background-color: rgba(19,148,255,0.8);
 }
 
 .imondwhite {
@@ -444,7 +444,7 @@ table tr th { color: #688a7e;}
 
 .login-img-body{
 
-  background: url('../img/bg-1.jpg') no-repeat center center fixed;
+  background: url('../img/bg-.jpg') no-repeat center center fixed;
 
   -webkit-background-size: cover;
 
@@ -458,7 +458,8 @@ table tr th { color: #688a7e;}
 
 .login-img2-body{
 
-  background: url('../img/bg-1.jpg') no-repeat center center fixed;
+  background: url('../img/cen.gif') no-repeat center center fixed;
+  /*background: rgba(236,121,57);*/
 
   -webkit-background-size: cover;
 
@@ -472,7 +473,7 @@ table tr th { color: #688a7e;}
 
 .login-img3-body{
 
-  background: url('../img/bg-1.jpg') no-repeat center center fixed;
+  /*background: url('../img/bg-.jpg') no-repeat center center fixed;*/
 
   -webkit-background-size: cover;
 
@@ -510,7 +511,7 @@ table tr th { color: #688a7e;}
 
 .login-img2-body .login-form{
 
-    border: 1px solid #B0B6BE;
+    /*border: 1px solid #B0B6BE;*/
 
     background: rgba(213,215,222,0.7);
 
@@ -518,7 +519,7 @@ table tr th { color: #688a7e;}
 
 .login-img3-body .login-form{
 
-    border: 1px solid #B0B6BE;
+    /*border: 1px solid #B0B6BE;*/
 
     background: rgba(213,215,222,0.9);
 

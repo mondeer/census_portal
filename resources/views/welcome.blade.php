@@ -24,50 +24,47 @@
 
 </head>
 
-  <body class="login-img3-body">
+  <body class="login-img2-body">
     <br><br><br><br><br>
-    <div class="container imond">
+    <div class="container">
+      <div class="row">
+          <div class="span8 imond">
+                  <h1 class="text-center imondwhite">LOGIN</h1>
 
-          <h1 class="text-center imondwhite">LOGIN</h1>
 
-      <hr>
+              <form class="form-horizontal" role="form" method="POST" action="/login">
+                  {{ csrf_field() }}
 
-      <form class="form-horizontal" role="form" method="POST" action="/login">
-          {{ csrf_field() }}
+                  <div class="control-group">
+                    <label class="imondwhite control-label" style="font-size: 22px; font-weight:900">E-Mail</label>
+                      <div class="span2">
+                        <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
+                      </div>
+                  </div>
 
-          <div class="form-group">
-              <label for="email" class="col-md-4 imondwhite control-label">E-Mail Address</label>
+                  <div class="control-group">
+                      <label for="password" class="imondwhite control-label" style="font-size: 22px; font-weight:900">Password</label>
 
-              <div class="col-md-6">
-                  <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
+                      <div class="span2">
+                          <input id="password" type="password" class="form-control" name="password" required>
+                      </div>
+                  </div>
 
+                  <div class="control-group">
+                      <div class="text-center imondwhite">
+                          <button type="submit" class="btn btn-primary">
+                              Login
+                          </button>
+                      </div>
+                  </div>
+              </form>
+
+              <div class="">
+                <h1 class="text-right"><a class="btn btn-primary btn-large imondwhite text-right" href="/register">Register</a></h1>
               </div>
           </div>
-
-          <div class="form-group">
-              <label for="password" class="col-md-4 imondwhite control-label">Password</label>
-
-              <div class="col-md-6">
-                  <input id="password" type="password" class="form-control" name="password" required>
-
-              </div>
-          </div>
-
-          <div class="form-group">
-              <div class="col-md-8 text-center imondwhite col-md-offset-4">
-                  <button type="submit" class="btn btn-primary">
-                      Login
-                  </button>
-
-              </div>
-          </div>
-      </form>
-      <hr>
-      <div class="col-md-4">
-        <h1 class="text-right"><a class="btn btn-primary btn-large imondwhite text-right" href="/register">not yet registered?</a></h1>
       </div>
     </div>
-
 
   </body>
 </html>
